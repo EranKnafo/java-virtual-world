@@ -11,6 +11,8 @@ OOP principles (interfaces, abstract classes, sub class, etc)
 Data structures (lists, arrays, hash maps, spatial grids, priority queue scheduler, Java Streams API)
 Testing: manual simulation testing, debugging using logs and breakpoints
 
+How To run:
+Runninng the file, VirtualWorld.Java will prompt the simulation
 
 
 
