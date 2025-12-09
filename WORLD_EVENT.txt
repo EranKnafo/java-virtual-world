@@ -1,0 +1,49 @@
+VOLCANO ERUPTION
+
+HOW TO TRIGGER THE EVENT:
+Click anywhere on the world map with the mouse.
+A volcano will spawn at the clicked location and immediately erupt.
+
+
+WHAT HAPPENS WHEN THE EVENT IS TRIGGERED:
+1. VISUAL CHANGES (Background):
+   - A circular(ish) area with a radius of 4 tiles around the volcano turns into burnt dirt
+   - The affected tiles change to show volcanic/burnt ground imagery
+   - This also is the area where entities are affected by the eruption (some entities on the outskirts still get effected)
+
+2. ENTITY CHANGES (Affected Entities):
+   - All entities within a 5-tile radius transform to Burnt versions  
+   - Dudes -> BurntDude (The new action is fleeing from Lava Monsters)
+   - Trees -> BurntTree (burning, but stay static)
+   - Saplings -> BurntSapling (become burnt and stay static)
+   - Fairies -> BurntFairy (The new action is fleeing from Lava Monsters)
+   - Houses -> BurntHouse (Burnt but stay static)
+   - Stumps -> BurntStump (start burning and stay static)
+   - These transformed all entities change appearance - fairy and Dudes change movement behavior
+
+3. NEW ENTITY:
+   - 2-4 LavaMonster entities spawn around the volcano after eruption
+
+WHAT THE BURNT ENTITIES DO:
+BurntDude: 
+- APPEARANCE: Burnt(Red) appearance 
+- BEHAVIOR CHANGES:
+  - They no longer gather resources 
+  - They actively run away from LavaMonsters and Volcanoes
+  - They move faster than normal dudes
+  - When no threats are nearby, they wander randomly in panic
+  - This essentially means they now prioritize their survival over anything else 
+
+BurntFairy:
+- APPEARANCE: Burnt(Red) fairy 
+- BEHAVIOR: Similar to burnt dudes - flees from volcano and lava monsters
+- Likewise prioritizes its own survival and forgets about saplings
+
+WHAT THE NEW ENTITY DOES AND HOW IT BEHAVES:
+- APPEARANCE: Animated lava creature
+- BEHAVIOR:
+  - Seeks out and hunts Trees and Stumps
+  - Moves toward the nearest Tree or Stump
+  - When it reaches a target, it destroys it and burns the ground beneath
+  - Converts the background tile to burnt (Like what happens when a volcano erupts)
+  - This eventually causes all the trees and stumps to be gone 
